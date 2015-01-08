@@ -11,7 +11,7 @@ OpenStackID requires a standard LAMP environment with SSL support.
 
 1. Install [vagrant](https://www.vagrantup.com/)
 2. Install [VirtualBox](https://www.virtualbox.org/)
-3. Run vagrant up in the openstackid-dev root directory.
+3. Run vagrant up in the vagrant-openstackid root directory.
 
 The puppet scripts will deploy the application under /srv/openstackid and
 configuration files will be available under /etc/openstackid directory.
