@@ -1,0 +1,15 @@
+SSLEngine on
+SSLProtocol All -SSLv2 -SSLv3
+SSLCertificateFile      <%= scope.lookupvar("openstackid::ssl_cert_file") %>
+SSLCertificateKeyFile   <%= scope.lookupvar("openstackid::ssl_key_file") %>
+<% if scope.lookupvar("openstackid::ssl_chain_file") != "" %>
+  SSLCertificateChainFile <%= scope.lookupvar("openstackid::ssl_chain_file") %>
+<% end %>
+
+RewriteEngine on
+
+DocumentRoot /srv/openstackid/public
+<Directory /srv/openstackid/public/>
+  Order allow,deny
+  Allow from all
+</Directory>
